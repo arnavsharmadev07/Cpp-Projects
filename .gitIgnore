@@ -1,0 +1,10 @@
+# Ignore executables and object files
+*.exe
+*.o
+*.obj
+
+# Ignore local IDE configurations
+.vs/
+.vscode/
+out/
+bin/
