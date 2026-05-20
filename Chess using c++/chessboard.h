@@ -8,6 +8,7 @@
 
 using namespace std;
 class ChessBoard{
+    vector<int> currentPosition,move_to_position;
     Piece* board[8][8];
     bool play = true;
     char boardX[8] = {'A','B','C','D','E','F','G','H'};
@@ -15,11 +16,13 @@ class ChessBoard{
     int chance_count = 0;
     string cellX = "-----------",player1,player2;
     void setPieces();
-    void loopAction1(vector<int> & vec,string & position,int & exitCode);
-    void kill_MovePiece(int x,int y,vector<int> move);
-    int gameLoop();
+    int verifyInput(vector<int> & vec,string & position);
+    void kill_MovePiece();
+    int gameLoop(char,string);
     void runGame();
     void fetchPastGame();
+    int askCurrentPosition();
+    int askFuturePosition(char);
     public:
         ChessBoard();
         void game();
