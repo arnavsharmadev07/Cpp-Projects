@@ -2,7 +2,8 @@
 *.exe
 *.o
 *.obj
-
+gameRecords.txt
+totalGames.txt
 # Ignore local IDE configurations
 .vs/
 .vscode/
